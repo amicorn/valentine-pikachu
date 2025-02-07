@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
-import mailImg from "./assets/you-got-mail-edited2.gif";
-import pikachuHappy from "./assets/pikachu-ami-animated-crop.gif";
-import pikachuBall from "./assets/pikachu-ball.gif";
-import pikachuValentine from "./assets/pikachu-valentine.gif";
-import Button from "@/components/ui/Button";
+
+// import mailImg from "./assets/you-got-mail-edited2.gif";
+// import pikachuHappy from "./assets/pikachu-ami-animated-crop.gif";
+// import pikachuBall from "./assets/pikachu-ball.gif";
+// import pikachuValentine from "./assets/pikachu-valentine.gif";
+// import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
 
 /* User flow
@@ -20,6 +21,19 @@ import { motion } from "framer-motion";
 */
 
 export default function App() {
+  const mailImg = new URL("./assets/you-got-mail-edited2.gif", import.meta.url)
+    .href;
+  const pikachuHappy = new URL(
+    "./assets/pikachu-ami-animated-crop.gif",
+    import.meta.url
+  ).href;
+  const pikachuBall = new URL("./assets/pikachu-ball.gif", import.meta.url)
+    .href;
+  const pikachuValentine = new URL(
+    "./assets/pikachu-valentine.gif",
+    import.meta.url
+  ).href;
+
   const [screen, setScreen] = useState("start");
   const [moveCount, setMoveCount] = useState(0);
   const [clickCount, setClickCount] = useState(0);
@@ -92,9 +106,9 @@ export default function App() {
         <img
           alt="pikachu-happy"
           src={pikachuHappy}
-          style={{ width: "500px" }}
+          style={{ width: "300px" }}
         />
-        <h1 className="heading"> Thank you for choosing me, too.💖</h1>
+        <h1 className="heading"> Thank you for chu-sing me, too. 💖</h1>
       </div>
     );
   }

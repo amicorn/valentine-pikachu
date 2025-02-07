@@ -12,6 +12,12 @@
         "jsx": "react-jsx"
     },
     "compilerOptions": {
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+      }
+    "compilerOptions": {
         "paths": {
           "@/*": ["./*"]
         }

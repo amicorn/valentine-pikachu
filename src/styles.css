@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "AmiCustomFont";
+  src: url("./assets/fonts/AmiFont-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "AmiCustomFont", sans-serif;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -8,10 +19,12 @@
 }
 
 .heading {
-  font-size: 2rem;
+  /* font-size: 3rem; */
+  font-family: "AmiCustomFont", sans-serif;
+  font-size: 40px;
   color: #ea4c89;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  /* font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif; */
   font-weight: bold;
 }
 
@@ -36,9 +49,8 @@
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  font-size: 14px;
+  font-family: "AmiCustomFont", sans-serif;
+  font-size: 20px;
   font-weight: 500;
   height: 40px;
   line-height: 20px;
@@ -80,6 +92,8 @@
   padding: 0.5rem 1rem;
   border-radius: 0.375rem;
   border-style: none;
+  font-family: "AmiCustomFont", sans-serif;
+  font-size: 20px;
 }
 
 .noButton {
@@ -89,6 +103,8 @@
   padding: 0.5rem 1rem;
   border-radius: 0.375rem;
   border-style: none;
+  font-family: "AmiCustomFont", sans-serif;
+  font-size: 20px;
 }
 
 .button:hover {
