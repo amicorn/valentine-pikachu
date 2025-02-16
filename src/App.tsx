@@ -1,38 +1,36 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
 
-// import mailImg from "./assets/you-got-mail-edited2.gif";
-// import pikachuHappy from "./assets/pikachu-ami-animated-crop.gif";
-// import pikachuBall from "./assets/pikachu-ball.gif";
-// import pikachuValentine from "./assets/pikachu-valentine.gif";
-// import Button from "@/components/ui/Button";
+import mailImg from "./assets/you-got-mail-edited2.gif";
+import pikachuHappy from "./assets/pikachu-ami-animated-crop.gif";
+import pikachuBall from "./assets/pikachu-ball.gif";
+import pikachuValentine from "./assets/pikachu-valentine.gif";
 import { motion } from "framer-motion";
 
-/* User flow
+/* User Flow
 1. Start screen: "You've got mail!" with "Open mail" button
 2. Valentine request screen: "Will chu be my valentine?" with 2 buttons yes and no 
 3. Upon detecting hover, "No" button will bounce around screen randomly changing x & y axes positions 
-4. Yes button will increase scale up size each attempt at clicking No button 
-5. After X (const || rng) num times of hovering No button, No button becomes clickable
-6. CLickable "No" button alternates array of funny text 
+4. Yes button will increase scale up size each attempt at clicking "No" button 
+5. After X (const || rng) num times of hovering "No" button, "No" button becomes clickable
+6. Clickable "No" button alternates array of funny text 
 7. error popup || last string will say "Error: oops! button doesn't work, try other button :p"
-8. Yes click -> reward screen "yay!" with animated gifs || my artwork
-
+8. "Yes" click triggers reward screen "yay!" with animated gifs || my artwork
 */
 
 export default function App() {
-  const mailImg = new URL("./assets/you-got-mail-edited2.gif", import.meta.url)
-    .href;
-  const pikachuHappy = new URL(
-    "./assets/pikachu-ami-animated-crop.gif",
-    import.meta.url
-  ).href;
-  const pikachuBall = new URL("./assets/pikachu-ball.gif", import.meta.url)
-    .href;
-  const pikachuValentine = new URL(
-    "./assets/pikachu-valentine.gif",
-    import.meta.url
-  ).href;
+  // const mailImg = new URL("./assets/you-got-mail-edited2.gif", import.meta.url)
+  //   .href;
+  // const pikachuHappy = new URL(
+  //   "./assets/pikachu-ami-animated-crop.gif",
+  //   import.meta.url
+  // ).href;
+  // const pikachuBall = new URL("./assets/pikachu-ball.gif", import.meta.url)
+  //   .href;
+  // const pikachuValentine = new URL(
+  //   "./assets/pikachu-valentine.gif",
+  //   import.meta.url
+  // ).href;
 
   const [screen, setScreen] = useState("start");
   const [moveCount, setMoveCount] = useState(0);
@@ -90,7 +88,6 @@ export default function App() {
           className="button button-pink"
           role="button"
           onClick={() => setScreen("valentine-request")}
-          // className="mailButton"
         >
           Open mail 💌
         </button>
@@ -116,11 +113,6 @@ export default function App() {
   return (
     <div className="container">
       {/* <h1 className="heading">Will you be my Valentine? ❤️</h1> */}
-      {/* <img
-        alt="valentine-request"
-        src={pikachuImageSrc}
-        style={{ width: "500px" }}
-      /> */}
       <img
         alt="valentine-request"
         src={pikachuValentine}

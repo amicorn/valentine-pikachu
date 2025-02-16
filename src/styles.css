@@ -1,6 +1,6 @@
 @font-face {
   font-family: "AmiCustomFont";
-  src: url("./assets/fonts/AmiFont-Regular.otf") format("opentype");
+  src: url("./assets/fonts/AmiFont2-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,7 +19,6 @@ body {
 }
 
 .heading {
-  /* font-size: 3rem; */
   font-family: "AmiCustomFont", sans-serif;
   font-size: 40px;
   color: #ea4c89;
@@ -84,7 +83,7 @@ body {
 
 .yesButton {
   position: absolute;
-  left: 25%;
+  left: 18%;
   top: 50%;
   transform: translateX(-50%);
   background-color: #30cd99;
