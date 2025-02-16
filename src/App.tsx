@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./styles.css";
 
 import mailImg from "./assets/you-got-mail-edited2.gif";
@@ -6,6 +6,12 @@ import pikachuHappy from "./assets/pikachu-ami-animated-crop.gif";
 import pikachuBall from "./assets/pikachu-ball.gif";
 import pikachuValentine from "./assets/pikachu-valentine.gif";
 import { motion } from "framer-motion";
+
+import glitterSfx from "./assets/audio/glitter-sound.mp3";
+import popSfx from "./assets/audio/pop sfx.mp3";
+import errorSfx from "./assets/audio/error sfx.mp3";
+import yaySfx from "./assets/audio/yay sfx.mp3";
+import swishSfx from "./assets/audio/swish sfx.mp3";
 
 /* User Flow
 1. Start screen: "You've got mail!" with "Open mail" button
@@ -39,6 +45,55 @@ export default function App() {
   const [noPosition, setNoPosition] = useState({ top: "50%", left: "50%" });
   const [imageIndex, setImageIndex] = useState(1);
 
+  // const playPopSound = () => {
+  //   const audio = new Audio(popSfx);
+  //   audio.play().catch((error) => console.log("Audio play failed:", error));
+  // };
+
+  // const playErrorSound = () => {
+  //   const audio = new Audio(errorSfx);
+  //   audio.play().catch((error) => console.log("Audio play failed:", error));
+  // };
+
+  const glitterAudioRef = useRef(new Audio(glitterSfx));
+  const popAudioRef = useRef(new Audio(popSfx));
+  const swishAudioRef = useRef(new Audio(swishSfx));
+  const errorAudioRef = useRef(new Audio(errorSfx));
+  const yayAudioRef = useRef(new Audio(yaySfx));
+
+  useEffect(() => {
+    // Preload all audio files on component mount
+    glitterAudioRef.current.load();
+    popAudioRef.current.load();
+    swishAudioRef.current.load();
+    yayAudioRef.current.load();
+
+    // Play glitter sound as soon as the component loads
+    glitterAudioRef.current
+      .play()
+      .catch((error) => console.log("Autoplay blocked", error));
+  }, []); // Empty dependency array means it runs only once when the component mounts
+
+  const playPopSound = () => {
+    popAudioRef.current.currentTime = 0;
+    popAudioRef.current.play();
+  };
+
+  const playSwishSound = () => {
+    swishAudioRef.current.currentTime = 0;
+    swishAudioRef.current.play();
+  };
+
+  const playErrorSound = () => {
+    errorAudioRef.current.currentTime = 0;
+    errorAudioRef.current.play();
+  };
+
+  const playYaySound = () => {
+    yayAudioRef.current.currentTime = 0;
+    yayAudioRef.current.play();
+  };
+
   const noTexts = [
     "Are you sure?",
     "Naurrr don't click me",
@@ -51,6 +106,7 @@ export default function App() {
 
   const handleNoClick = () => {
     if (clickCount >= 5) {
+      playErrorSound();
       alert("Oops! Looks like that button is broken. Try the other one :p");
     } else {
       setClickCount(clickCount + 1);
@@ -59,6 +115,7 @@ export default function App() {
 
   const moveNoButton = () => {
     if (moveCount < 9) {
+      playSwishSound();
       const randomX = Math.random() * 80 + 10;
       const randomY = Math.random() * 80 + 10;
       setNoPosition({ top: `${randomY}`, left: `${randomX}%` });
@@ -66,6 +123,14 @@ export default function App() {
       setYesSize(yesSize + 0.25);
     }
   };
+
+  useEffect(() => {
+    if (screen === "yay") {
+      // const audio = new Audio(yaySfx);
+      // audio.play().catch((error) => console.log("Audio play failed:", error));
+      playYaySound();
+    }
+  }, [screen]);
 
   // Loop through pikachu static images to create animation effect
   useEffect(() => {
@@ -87,7 +152,10 @@ export default function App() {
         <button
           className="button button-pink"
           role="button"
-          onClick={() => setScreen("valentine-request")}
+          onClick={() => {
+            playPopSound();
+            setScreen("valentine-request");
+          }}
         >
           Open mail 💌
         </button>
@@ -122,7 +190,10 @@ export default function App() {
         <motion.button
           className="button yesButton"
           style={{ transform: `scale(${yesSize * 1.2})` }}
-          onClick={() => setScreen("yay")}
+          onClick={() => {
+            playPopSound();
+            setScreen("yay");
+          }}
         >
           Yes! 💖
         </motion.button>
@@ -133,7 +204,10 @@ export default function App() {
             top: noPosition.top,
             left: noPosition.left,
           }}
-          onClick={handleNoClick}
+          onClick={() => {
+            playPopSound();
+            handleNoClick();
+          }}
           onMouseEnter={moveNoButton}
         >
           {moveCount < 9
