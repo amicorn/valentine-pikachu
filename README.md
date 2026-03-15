@@ -56,18 +56,18 @@ The application is built on a decoupled, modular architecture to ensure a clear 
 ## 🧠 Engineering Challenges & Technical Solutions
 
 ### 1. Dynamic Stacking Contexts (Z-Index Management)
-**Challenge:** As the "Yes" button scales exponentially—reaching scales of up to $3.5x$—it threatened to occlude the "No" button, preventing user interaction and breaking the core game loop.
-**Solution:** Implemented a fixed stacking context ($z-index: 999$) for the `noButton` class. This ensures the target remains on the top layer of the rendering engine's paint tree, regardless of the scale or transform applied to adjacent nodes.
+- **Challenge:** As the "Yes" button scales exponentially—reaching scales of up to $3.5x$—it threatened to occlude the "No" button, preventing user interaction and breaking the core game loop.
+- **Solution:** Implemented a fixed stacking context ($z-index: 999$) for the `noButton` class. This ensures the target remains on the top layer of the rendering engine's paint tree, regardless of the scale or transform applied to adjacent nodes.
 
 
 
 ### 2. Viewport-Constrained Randomization Algorithm
-**Challenge:** Standard `Math.random()` distributions can result in buttons moving off-screen or clipping behind fixed UI headers on varying mobile viewports.
-**Solution:** Developed a constrained coordinate generator. The logic restricts movement to a "safe zone" defined by a $15\%$ to $75\%$ range of the container dimensions. This mathematical constraint ensures the button remains within the interactive hit-box of the viewport at all times.
+- **Challenge:** Standard `Math.random()` distributions can result in buttons moving off-screen or clipping behind fixed UI headers on varying mobile viewports.
+- **Solution:** Developed a constrained coordinate generator. The logic restricts movement to a "safe zone" defined by a $15\%$ to $75\%$ range of the container dimensions. This mathematical constraint ensures the button remains within the interactive hit-box of the viewport at all times.
 
 ### 3. Asynchronous Audio Synchronization
-**Challenge:** Concurrent event triggers (rapid hovering + clicking) can lead to audio clipping, race conditions, or blocked execution in modern browser engines due to strict autoplay policies.
-**Solution:** Encapsulated audio playback in a singleton-pattern helper function. By utilizing a `.catch()` block, we gracefully handle "Autoplay Policy" rejections, ensuring the app remains silent rather than throwing unhandled exceptions if the user hasn't interacted with the DOM yet.
+- **Challenge:** Concurrent event triggers (rapid hovering + clicking) can lead to audio clipping, race conditions, or blocked execution in modern browser engines due to strict autoplay policies.
+- **Solution:** Encapsulated audio playback in a singleton-pattern helper function. By utilizing a `.catch()` block, we gracefully handle "Autoplay Policy" rejections, ensuring the app remains silent rather than throwing unhandled exceptions if the user hasn't interacted with the DOM yet.
 
 
 
