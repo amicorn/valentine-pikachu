@@ -5,6 +5,28 @@ By Amy Ouyang. Coded in february 2025, modified to be compatible with github in 
 
 A high-fidelity, interactive React application featuring a non-deterministic "No" Button Chase mechanic, custom typography, and multi-stage state transitions. This project demonstrates a "No-Build" architecture, leveraging browser-native ESM and standalone Babel transformation for high portability and rapid deployment.
 
+## 🖼 Project gallery & game user flow
+
+| Application Preview | Process & Logic |
+| :--- | :--- |
+| **Start Screen** <br> ![Start Screen](./screenshots/start%20screen%20desktop.png) | **Step 0: Launch** <br> ![Step 0](./screenshots/step%200%20showing%20app%20start.jpeg) |
+| **Question Screen** <br> ![Question Screen](./screenshots/question%20screen%20desktop.png) | **Step 1: Interaction** <br> ![Step 1](./screenshots/step%201%20with%20caption.jpeg) |
+| **"Naur" State** <br> ![Naur State](./screenshots/naur%20don't%20click%20me%20desktop.png) | **Step 2: Engagement** <br> ![Step 2](./screenshots/step%202%20with%20caption.jpeg) |
+| **Final Error Alert** <br> ![Error Alert](./screenshots/trick%20error%20alert%20desktop.png) | **Step 3: Escalation** <br> ![Step 3](./screenshots/step%203%20with%20caption.jpeg) |
+| **Step 4: Persistence** <br> ![Step 4](./screenshots/step%204%20with%20caption.jpeg) | **Step 5: Almost There** <br> ![Step 5](./screenshots/step%205%20with%20caption.jpeg) |
+| **Step 6: The Pivot** <br> ![Step 6](./screenshots/step%206%20with%20caption.jpeg) | **Step 7: Completion** <br> ![Step 7](./screenshots/step%207%20with%20caption.jpeg) |
+
+### 🎨 Design & animation process
+
+| Phase | Visualization |
+| :--- | :--- |
+| **Initial Concept** | ![6 Things Made](./screenshots/6%20things%20i%20made%20for%20valentine's.jpeg) |
+| **Drawing Process** | ![Drawing Process](./screenshots/drawing%20process.jpeg) |
+| **Frame Animation** | ![Drawing Frames](./screenshots/drawing%20frames%20with%20caption.jpeg) |
+| **Animation Workflow** | ![Animation Process](./screenshots/animation%20process.jpeg) |
+| **First Animation Draft** | ![First Attempt](./screenshots/first%20attempt%20animation%20with%20caption.jpeg) |
+| **Typography Design** | ![Design Font](./screenshots/design%20font%20with%20caption.jpeg) |
+| **Loop Engineering** | ![Loop Logic](./screenshots/code%20to%20loop%20animation.jpeg) |
 
 
 ## 🏗 System Architecture
