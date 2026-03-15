@@ -1,5 +1,7 @@
 # Will you be my Valentine? ft. Pikachu ⚡️💖
-Code and art by Amy Ouyang.
+Code, art, animation, custom font by Amy Ouyang.
+
+[Demo](https://www.instagram.com/reel/DUxAaQ2EZUj/)
 
 **TLDR;** Cute game to ask your crush to be your Valentine, lots of fun things happen when they try to click No, including:
 1.  No button runs away from them
