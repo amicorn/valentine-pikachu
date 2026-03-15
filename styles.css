@@ -1,0 +1,85 @@
+/*  Custom font by Amy Ouyang */
+@font-face {
+    font-family: "AmiCustomFont";
+    src: url("./assets/fonts/AmiFont2-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-family: "AmiCustomFont", sans-serif; 
+    overflow: hidden; 
+    background-color: #fff5f8; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.heading { 
+    font-family: "AmiCustomFont", sans-serif;
+    color: #ea4c89; 
+    font-size: 40px; 
+    font-weight: bold;
+    margin: 10px;
+}
+
+.buttonContainer {
+    position: relative;
+    width: 100vw;
+    height: 400px; /* Gives space for the No button to roam */
+}
+
+/* 2. Restore Pink Button Styles */
+.button-pink {
+    background-color: #ea4c89;
+    border-radius: 8px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: "AmiCustomFont", sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: transform 100ms;
+}
+
+.button-pink:hover {
+    transform: scale(1.1);
+}
+
+/* 3. Button Positions & Layers */
+.button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: "AmiCustomFont", sans-serif;
+    font-size: 20px;
+    position: absolute;
+}
+
+.yesButton {
+    background-color: #30cd99;
+    color: white;
+    z-index: 10;
+    left: 35%; /* Default center-left */
+    top: 20%;
+    transition: transform 0.2s ease;
+}
+
+.noButton {
+    background-color: #da2e2e;
+    color: white;
+    z-index: 999; /* Stay on top of Yes button */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.main-img { width: min(450px, 90vw); border-radius: 10px; }
