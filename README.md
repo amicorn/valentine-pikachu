@@ -1,12 +1,12 @@
 # Will you be my Valentine? ft. Pikachu ⚡️💖
+Code and art by Amy Ouyang.
+
 **TLDR;** Cute game to ask your crush to be your Valentine, lots of fun things happen when they try to click No, including:
 1.  No button runs away from them
 2.  Yes button gets bigger
 3.  No button says lots of funny text
 4.  If you click No too many times, you trigger a system error alert saying the No button is broken (wink wink)
 5.  Happi gifs and music ensure if you click Yes.
-
-By Amy Ouyang. Coded in february 2025, modified to be compatible with github in march 2026.
 
 A high-fidelity, interactive React application featuring a non-deterministic "No" Button Chase mechanic, custom typography, and multi-stage state transitions. This project demonstrates a "No-Build" architecture, leveraging browser-native ESM and standalone Babel transformation for high portability and rapid deployment.
 
@@ -107,3 +107,8 @@ The application is built on a decoupled, modular architecture to ensure a clear 
     ├── fonts/          # AmiCustomFont (OTF)
     ├── audio/          # Swish, Pop, Error, and Yay SFX (MP3)
     └── images/         # Optimized GIF and static assets
+```
+
+## Developer Notes
+By Amy Ouyang. Coded in february 2025, modified to be compatible with github in march 2026.
+
