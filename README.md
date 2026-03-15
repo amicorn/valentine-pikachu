@@ -1,32 +1,39 @@
 # Will you be my Valentine? ft. Pikachu ⚡️💖
-**TLDR;** Cute game to ask your crush to be your Valentine, lots of fun things happen when they try to click No (No button runs away from them, Yes button gets bigger, no button says funny text, a system error alert triggers saying the No button is broken (wink wink), etc. happi gifs and music ensure if they click Yes.
+**TLDR;** Cute game to ask your crush to be your Valentine, lots of fun things happen when they try to click No, including:
+1.  No button runs away from them
+2.  Yes button gets bigger
+3.  No button says lots of funny text
+4.  If you click No too many times, you trigger a system error alert saying the No button is broken (wink wink)
+5.  Happi gifs and music ensure if you click Yes.
 
 By Amy Ouyang. Coded in february 2025, modified to be compatible with github in march 2026.
 
 A high-fidelity, interactive React application featuring a non-deterministic "No" Button Chase mechanic, custom typography, and multi-stage state transitions. This project demonstrates a "No-Build" architecture, leveraging browser-native ESM and standalone Babel transformation for high portability and rapid deployment.
 
-## 🖼 Project gallery & game user flow
+## 🖼 Project Gallery & Development Process
 
-| Application Preview | Process & Logic |
+
+### 🕹 User Journey
+| User Interface State | Description & Logic |
 | :--- | :--- |
-| **Start Screen** <br> ![Start Screen](./screenshots/start%20screen%20desktop.png) | **Step 0: Launch** <br> ![Step 0](./screenshots/step%200%20showing%20app%20start.jpeg) |
-| **Question Screen** <br> ![Question Screen](./screenshots/question%20screen%20desktop.png) | **Step 1: Interaction** <br> ![Step 1](./screenshots/step%201%20with%20caption.jpeg) |
-| **"Naur" State** <br> ![Naur State](./screenshots/naur%20don't%20click%20me%20desktop.png) | **Step 2: Engagement** <br> ![Step 2](./screenshots/step%202%20with%20caption.jpeg) |
-| **Final Error Alert** <br> ![Error Alert](./screenshots/trick%20error%20alert%20desktop.png) | **Step 3: Escalation** <br> ![Step 3](./screenshots/step%203%20with%20caption.jpeg) |
-| **Step 4: Persistence** <br> ![Step 4](./screenshots/step%204%20with%20caption.jpeg) | **Step 5: Almost There** <br> ![Step 5](./screenshots/step%205%20with%20caption.jpeg) |
-| **Step 6: The Pivot** <br> ![Step 6](./screenshots/step%206%20with%20caption.jpeg) | **Step 7: Completion** <br> ![Step 7](./screenshots/step%207%20with%20caption.jpeg) |
+| **Start Screen** <br> <img src="./screenshots/start%20screen%20desktop%20you've%20got%20mail.png" width="250" alt="Start Screen"> | **Step 0 & 1: Entry Sequence** <br> Initial state showcasing the "You've Got Mail" theme. <br> <img src="./screenshots/step%200%20showing%20app%20start%20you've%20got%20mail.jpeg" width="250" alt="Step 0"> |
+| **Question Screen** <br> <img src="./screenshots/question%20screen%20desktop.png" width="250" alt="Question Screen"> | **Step 2: The Chase** <br> Triggering the fleeing "No" button mechanic. <br> <img src="./screenshots/step%202%20with%20caption%20running%20no%20button.jpeg" width="250" alt="Step 2"> |
+| **Dynamic Scaling** <br> <img src="./screenshots/naur%20don't%20click%20me%20desktop.png" width="250" alt="Naur State"> | **Step 3: UX Escalation** <br> The "Yes" button grows as the "No" button is avoided. <br> <img src="./screenshots/step%203%20with%20caption%20yes%20button%20gets%20bigger.jpeg" width="250" alt="Step 3"> |
+| **Dialogue Sequence** <br> <img src="./screenshots/step%204%20with%20caption%20no%20button%20changes%20funny%20text.jpeg" width="250" alt="Text Change"> | **Step 4: Persistence** <br> The "No" button cycles through funny dialogue on-click. |
+| **Final Warning** <br> <img src="./screenshots/step%205%20with%20caption%20clicking%20no%20button%20last%20chance.jpeg" width="250" alt="Last Chance"> | **Step 5: The "Last Chance"** <br> Final state before the system-level override. |
+| **System Override** <br> <img src="./screenshots/trick%20error%20alert%20desktop.png" width="250" alt="Trick Alert"> | **Step 6: Error Notification** <br> Custom popup alert notifying the user of the "broken" button. <br> <img src="./screenshots/step%206%20with%20caption%20system%20alert%20popup.jpeg" width="250" alt="Step 6"> |
+| **Success State** <br> <img src="./screenshots/yay%20screen%20desktop.png" width="250" alt="Yay Desktop"> | **Step 7: Final Reward** <br> The animated "Yay" screen. <br> <img src="./screenshots/step%207%20with%20caption%20yay%20screen%20end.jpeg" width="250" alt="Step 7"> |
 
-### 🎨 Design & animation process
 
-| Phase | Visualization |
-| :--- | :--- |
-| **Initial Concept** | ![6 Things Made](./screenshots/6%20things%20i%20made%20for%20valentine's.jpeg) |
-| **Drawing Process** | ![Drawing Process](./screenshots/drawing%20process.jpeg) |
-| **Frame Animation** | ![Drawing Frames](./screenshots/drawing%20frames%20with%20caption.jpeg) |
-| **Animation Workflow** | ![Animation Process](./screenshots/animation%20process.jpeg) |
-| **First Animation Draft** | ![First Attempt](./screenshots/first%20attempt%20animation%20with%20caption.jpeg) |
-| **Typography Design** | ![Design Font](./screenshots/design%20font%20with%20caption.jpeg) |
-| **Loop Engineering** | ![Loop Logic](./screenshots/code%20to%20loop%20animation.jpeg) |
+
+### 🎨 Behind the Scenes
+
+| Phase 1: Planning & Design | Phase 2: Execution & Assets | Phase 3: Finalization |
+| :--- | :--- | :--- |
+| **Concept & Planning** <br> <img src="./screenshots/6%20things%20i%20made%20for%20valentine's.jpeg" width="220"> | **Frame-by-Frame Drawing** <br> <img src="./screenshots/drawing%20frames%20with%20caption.jpeg" width="220"> | **First Render Draft** <br> <img src="./screenshots/first%20attempt%20animation%20with%20caption.jpeg" width="220"> |
+| **Character Design** <br> <img src="./screenshots/drawing%20process.jpeg" width="220"> | **Animation Workflow** <br> <img src="./screenshots/animation%20process.jpeg" width="220"> | **Typography & Font Design** <br> <img src="./screenshots/design%20font%20with%20caption.jpeg" width="220"> |
+| | **Code & Loop Engineering** <br> <img src="./screenshots/code%20to%20loop%20animation.jpeg" width="220"> | |
+
 
 
 ## 🏗 System Architecture
